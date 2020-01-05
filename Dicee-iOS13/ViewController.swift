@@ -16,7 +16,8 @@ class ViewController: UIViewController {
        
     @IBOutlet weak var rightDice: UIImageView!
     
-  
+  var leftDiceIndex = 0
+  var rightDiceIndex = 0
 
     
     override func viewDidLoad() {
@@ -34,11 +35,13 @@ class ViewController: UIViewController {
         
         var _ = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true){ t in
             count += 1
-            let leftDiceIndex = Int.random(in: 0...5)
-            let rightDiceIndex = Int.random(in: 0...5)
-            self.leftDice.image = diceArray[leftDiceIndex]
-            self.rightDice.image = diceArray[rightDiceIndex]
-            print("left dice= \(leftDiceIndex + 1)")
+            self.leftDiceIndex = Int.random(in: 0...5)
+            self.rightDiceIndex = Int.random(in: 0...5)
+            self.leftDice.image = diceArray[self.leftDiceIndex]
+            self.rightDice.image = diceArray[self.rightDiceIndex]
+            print("left dice= \(self.leftDiceIndex + 1)")
+            print("righ dice= \(self.rightDiceIndex + 1)")
+
             if count >= 5 {
                 t.invalidate()
             }
