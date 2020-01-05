@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //IBOutlet allows me to reference a UI element
+    
+    @IBOutlet weak var leftDice: UIImageView!
+       
+    @IBOutlet weak var rightDice: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        leftDice.image = #imageLiteral(resourceName: "DiceSix")
+        rightDice.image = #imageLiteral(resourceName: "DiceTwo")
+      
     }
-
 
 }
 
