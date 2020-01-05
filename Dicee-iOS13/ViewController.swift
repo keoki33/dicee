@@ -20,10 +20,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        leftDice.image = #imageLiteral(resourceName: "DiceSix")
-        rightDice.image = #imageLiteral(resourceName: "DiceTwo")
+//        leftDice.image = #imageLiteral(resourceName: "DiceOne")
+//        rightDice.image = #imageLiteral(resourceName: "DiceOne")
       
     }
 
+    
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        leftDice.image = #imageLiteral(resourceName: "DiceThree")
+          rightDice.image = #imageLiteral(resourceName: "DiceTwo")
+ 
+        
+    }
+    
 }
 
